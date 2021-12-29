@@ -1,0 +1,8 @@
+{
+  "name": "rock-solid-store",
+  "version": "1.0.0",
+  "description": "Store created in solidjs",
+  "main": "index.js",
+  "author": "siddacool",
+  "license": "ISC"
+}

@@ -1,0 +1,17 @@
+---
+import BaseLayout from 'layouts:BaseLayout';
+
+const {title = 'product'} = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <article class="product">
+    <h2>Product</h2>
+
+    <section>
+      <slot />
+    </section>
+  </article>
+</BaseLayout>
+
+

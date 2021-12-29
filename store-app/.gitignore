@@ -1,0 +1,13 @@
+# /store-app/.gitignore
+
+# build output
+dist
+
+# dependencies
+.snowpack/
+
+# environment variables
+.env.production
+
+# logs
+*.log
