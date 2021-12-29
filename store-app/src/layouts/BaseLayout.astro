@@ -19,19 +19,17 @@ const {title = 'Solid store'} = Astro.props;
   </body>
 </html>
 
+<style global lang="scss">
+  @import '../styles/base.scss';
+</style>
 
-<style global>
-  * {
-    box-sizing: border-box;
-  }
-  html,
-  body {
-    font-family: 'Segoe UI', system-ui;
-    margin: 0;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
+<style lang="scss">
+  main {
+    background-color: var(--color-bg);
+    padding: 48px 24px;
+    height: calc(100vh - 60px);
+    overflow: auto;
   }
 </style>
+
+

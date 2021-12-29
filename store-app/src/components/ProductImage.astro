@@ -1,0 +1,25 @@
+---
+// import ProductInit from 'lib:ProductInit';
+import ProductImageLoader from 'lib:ProductImageLoader';
+---
+
+<div class="product-image">
+  <ProductImageLoader client:idle/>
+</div>
+
+<style lang="scss">
+.product-image {
+  background-color: var(--color-backdrop);
+  height: 400px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+
+  @media (min-width: 900px) {
+    width: 30%;
+    max-width: 500px;
+    height: 650px;
+  }
+}
+</style>

@@ -1,10 +1,19 @@
 ---
-import Counter from 'lib:Counter';
 import BaseLayout from 'layouts:BaseLayout';
+import ItemsLoader from 'lib:ItemsLoader';
 ---
 
 <BaseLayout>
-  <Counter client:idle>
-    <h1>Hello, Solid!</h1>
-  </Counter>
+  <h1>Store items</h1>
+
+  <section>
+    <ItemsLoader client:idle/>
+  </section>
 </BaseLayout>
+
+<style global lang="scss">
+  section {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+</style>

@@ -1,0 +1,4 @@
+.items-loader {
+  display: flex;
+  flex-wrap: wrap;
+}

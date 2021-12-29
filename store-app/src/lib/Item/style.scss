@@ -1,0 +1,33 @@
+.item {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--color-main);
+  color: var(--color-font-light);
+  cursor: pointer;
+  text-decoration: none;
+
+  @media (min-width: 900px) {
+    margin-right: 24px;
+    width: initial;
+    flex: 1;
+    min-width: calc(33.333% - 24px);
+    max-width: calc(33.333% - 24px);
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+  }
+}
+
+.image {
+  height: 410px;
+  display: flex;
+}
+
+.name {
+  padding: 24px;
+}
