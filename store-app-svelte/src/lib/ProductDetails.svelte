@@ -9,24 +9,3 @@
 
   <p>{$product.description}</p>
 </div>
-
-<style lang="scss">
-  .product-details {
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0;
-
-      @media (min-width: 900px) {
-        font-size: 3rem;
-      }
-    }
-
-    p {
-      font-size: 1.3rem;
-
-      @media (min-width: 900px) {
-        max-width: 500px;
-      }
-    }
-  }
-</style>
