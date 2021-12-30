@@ -1,0 +1,34 @@
+---
+import Header from 'components:Header';
+
+const {title = 'Solid store'} = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style global lang="scss">
+  @import '../styles/base.scss';
+</style>
+
+<style lang="scss">
+  main {
+    padding: 24px;
+    height: calc(100vh - 60px);
+    overflow: auto;
+  }
+</style>
+
+
