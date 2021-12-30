@@ -27,7 +27,7 @@
     "checkJs": true,
     "paths": {
       "lib:*": [
-        "src/lib/*/index.jsx"
+        "src/lib/*/index.tsx"
       ],
       "components:*": [
         "src/components/*.astro"
@@ -44,6 +44,7 @@
     "src/**/*.d.ts",
     "src/**/*.js",
     "src/**/*.ts",
-    "src/**/*.jsx"
+    "src/**/*.jsx",
+    "src/**/*.tsx",
   ]
 }

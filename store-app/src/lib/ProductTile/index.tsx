@@ -1,7 +1,12 @@
 import ImageLoader from 'lib:ImageLoader';
+import type { IProduct } from 'src/types';
 import './style.scss';
 
-export default function ProductTile(props) {
+interface IProps {
+  item: IProduct;
+}
+
+const ProductTile = (props: IProps) => {
   return (
     <a class="product-tile" href={`/product/#${props.item.id}`}>
       <div className="image">
@@ -10,4 +15,6 @@ export default function ProductTile(props) {
       <div className="name">{props.item.title}</div>
     </a>
   );
-}
+};
+
+export default ProductTile;

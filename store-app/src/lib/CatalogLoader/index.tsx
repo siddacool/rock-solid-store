@@ -1,9 +1,10 @@
 import { onMount } from 'solid-js';
+import type { Component } from 'solid-js';
 import './style.css';
 import { catalog, fetchCatalog } from 'store:catalog';
 import ProductTile from 'lib:ProductTile';
 
-export default function CatalogLoader() {
+const CatalogLoader: Component = () => {
   onMount(() => {
     fetchCatalog().catch((e) => {
       console.log(e);
@@ -20,4 +21,6 @@ export default function CatalogLoader() {
       </Switch>
     </div>
   );
-}
+};
+
+export default CatalogLoader;
