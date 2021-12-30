@@ -4,22 +4,35 @@ import ProductImageLoader from 'lib:ProductImageLoader';
 ---
 
 <div class="product-image">
-  <ProductImageLoader client:idle/>
+  <section>
+    <ProductImageLoader client:idle/>
+  </section>
 </div>
 
 <style lang="scss">
 .product-image {
-  background-color: var(--color-backdrop);
-  height: 400px;
+  background-color: var(--color-backdrop-light);
+  height: 500px;
   width: 100%;
   border-radius: 6px;
   overflow: hidden;
   display: flex;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  @media (min-width: 900px) {
-    width: 30%;
-    max-width: 500px;
-    height: 650px;
+  @media (min-width: 1100px) {
+    width: 45%;
+    max-width: 800px;
+    height: calc(100vh - 110px);
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  section {
+    width: 70%;
   }
 }
 </style>
