@@ -1,9 +1,27 @@
 :root {
   --color-main: #a40e4c;
-  --color-bg: #acc3a6;
+  --color-bg: #f5d6ba;
   --color-bg-dark: #2c2c54;
-  --color-backdrop: #f5d6ba;
+  --color-backdrop: #acc3a6;
+  --color-backdrop-ight: #fff;
 
   --color-font-light: #fff;
   --color-font-dark: #000;
+
+  --shadow-color: 29deg 36% 64%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.21),
+    0.4px 0.7px 0.9px -1.2px hsl(var(--shadow-color) / 0.21),
+    0.8px 1.6px 2px -2.5px hsl(var(--shadow-color) / 0.21);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.22),
+    0.7px 1.4px 1.8px -0.8px hsl(var(--shadow-color) / 0.22),
+    1.7px 3.4px 4.3px -1.7px hsl(var(--shadow-color) / 0.22),
+    4px 8.1px 10.2px -2.5px hsl(var(--shadow-color) / 0.22);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.2),
+    1px 2px 2.5px -0.4px hsl(var(--shadow-color) / 0.2),
+    1.7px 3.5px 4.4px -0.7px hsl(var(--shadow-color) / 0.2),
+    2.8px 5.6px 7px -1.1px hsl(var(--shadow-color) / 0.2),
+    4.4px 8.9px 11.2px -1.4px hsl(var(--shadow-color) / 0.2),
+    6.9px 13.7px 17.3px -1.8px hsl(var(--shadow-color) / 0.2),
+    10.4px 20.8px 26.2px -2.1px hsl(var(--shadow-color) / 0.2),
+    15.3px 30.5px 38.4px -2.5px hsl(var(--shadow-color) / 0.2);
 }

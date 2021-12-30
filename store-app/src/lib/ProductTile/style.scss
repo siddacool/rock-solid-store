@@ -1,16 +1,17 @@
 .product-tile {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 24px;
   border-radius: 6px;
   overflow: hidden;
-  background-color: var(--color-main);
-  color: var(--color-font-light);
+  color: var(--color-font-dark);
   cursor: pointer;
   text-decoration: none;
 
   @media (min-width: 900px) {
-    margin-right: 24px;
+    margin-left: 12px;
+    margin-right: 12px;
     width: initial;
     flex: 1;
     min-width: calc(33.333% - 24px);
@@ -26,8 +27,13 @@
 .image {
   height: 410px;
   display: flex;
+  padding: 8px;
+  background-color: var(--color-backdrop-ight);
 }
 
 .name {
   padding: 24px;
+  flex: 1;
+  font-weight: 500;
+  background-color: var(--color-backdrop);
 }
