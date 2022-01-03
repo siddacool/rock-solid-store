@@ -1,11 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { product, fetchProductById } from "store:product";
-
-  onMount(() => {
-    const id = window.location.hash.replace("#", "");
-    fetchProductById(id);
-  });
+  import { product } from "store:product";
 </script>
 
 <img src={$product.image} alt={$product.title} />
