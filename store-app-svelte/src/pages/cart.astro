@@ -1,8 +1,9 @@
 ---
 import SubPageLayout from 'layouts:SubPageLayout';
+import CartList from 'lib:CartList';
 
 const crumbs = [{name: 'Cart' }];
 ---
 <SubPageLayout crumbs={crumbs} title="Items in cart">
-
+  <CartList client:idle />
 </SubPageLayout>

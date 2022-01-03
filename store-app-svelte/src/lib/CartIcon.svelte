@@ -9,12 +9,8 @@
   const getCartCount = (items) => {
     let countInternal = 0;
 
-    if (!items || (items && !items.length)) {
-      return 0;
-    }
-
-    items.forEach((item) => {
-      countInternal = countInternal + item.count;
+    Object.entries(items).forEach((item) => {
+      countInternal = countInternal + item[1].count;
     });
 
     return countInternal;

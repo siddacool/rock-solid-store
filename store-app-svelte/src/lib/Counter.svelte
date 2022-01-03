@@ -2,7 +2,7 @@
   import Button from "lib:Button";
   import { createEventDispatcher } from "svelte";
   export let value = 1;
-  export let min = 1;
+  export let min = 0;
   export let max = 99;
   let clazz = "";
   export { clazz as class };
@@ -10,7 +10,7 @@
   const dispatch = createEventDispatcher();
 
   function onChangeEvent(value) {
-    if (min && value < min) {
+    if ((min || min === 0) && value < min) {
       return;
     }
 
@@ -41,7 +41,7 @@
 <div class={`counter ${clazz || ""}`}>
   <Button
     on:click={onDecrement}
-    disabled={min && value <= min}
+    disabled={(min || min === 0) && value <= min}
     class="counter-button">-</Button
   >
   <input type="text" value={`${value}`} readonly />

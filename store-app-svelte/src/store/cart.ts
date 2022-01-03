@@ -1,28 +1,30 @@
 import { writable } from "svelte/store";
 import type { ICartItem } from "../types";
 
-const catalogBaseState: ICartItem[] = [
-  {
-    id: "1",
-    count: 2,
-  },
-  {
-    id: "2",
+const catalogBaseState = {
+  "1": {
     count: 1,
   },
-  {
-    id: "3",
-    count: 4,
+  "3": {
+    count: 2,
   },
-];
+};
 
 export const cart = writable(catalogBaseState);
 
 export const addToCart = (item: ICartItem) => {
   cart.update((data) => {
-    const newData = [...data];
+    const newData = { ...data };
 
-    newData.push(item);
+    if (!newData[item.id]) {
+      newData[item.id] = { count: 0 };
+    }
+
+    if (item.force) {
+      newData[item.id].count = item.count;
+    } else {
+      newData[item.id].count = newData[item.id].count + item.count;
+    }
 
     return newData;
   });
