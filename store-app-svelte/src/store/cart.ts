@@ -18,10 +18,6 @@ const catalogBaseState: ICartItem[] = [
 
 export const cart = writable(catalogBaseState);
 
-export const getCartCount = () => {
-  console.log(cart);
-};
-
 export const addToCart = (item: ICartItem) => {
   cart.update((data) => {
     const newData = [...data];

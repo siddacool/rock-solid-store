@@ -1,7 +1,32 @@
 <script lang="ts">
+  import { onDestroy } from "svelte";
   import IconButtonLink from "lib:IconButtonLink";
   import CountDisplay from "lib:CountDisplay";
   import { cart } from "store:cart";
+
+  let count = 0;
+
+  const getCartCount = (items) => {
+    let countInternal = 0;
+
+    if (!items || (items && !items.length)) {
+      return 0;
+    }
+
+    items.forEach((item) => {
+      countInternal = countInternal + item.count;
+    });
+
+    return countInternal;
+  };
+
+  const unsubscribe = cart.subscribe((items) => {
+    count = getCartCount(items);
+  });
+
+  onDestroy(() => {
+    unsubscribe();
+  });
 </script>
 
 <div class="cart-icon">
@@ -21,8 +46,8 @@
       />
     </svg>
 
-    {#if $cart.length}
-      <CountDisplay value={$cart.length} class="cart-count" />
+    {#if count}
+      <CountDisplay value={count} class="cart-count" />
     {/if}
   </IconButtonLink>
 </div>
