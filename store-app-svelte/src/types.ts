@@ -19,3 +19,8 @@ export interface IProductState {
   loading: boolean;
   data: IProduct;
 }
+
+export interface ICartItem {
+  id: ProductId;
+  count: number;
+}

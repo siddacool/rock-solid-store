@@ -3,6 +3,7 @@
   import ProductImage from "lib:ProductImage";
   import ProductDetails from "lib:ProductDetails";
   import BreadCrumbs from "lib:BreadCrumbs";
+  import AddToCartButton from "lib:AddToCartButton";
 
   import { product, fetchProductById } from "store:product";
 
@@ -27,7 +28,7 @@
 <BreadCrumbs {crumbs} />
 <article>
   <section><ProductImage /></section>
-  <section><ProductDetails /></section>
+  <section><ProductDetails /> <AddToCartButton /></section>
 </article>
 
 <style lang="scss">
