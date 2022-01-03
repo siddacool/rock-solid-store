@@ -4,6 +4,9 @@
   import { addToCart } from "store:cart";
   import Counter from "lib:Counter";
 
+  const min = 1;
+  const max = 6;
+
   let count = 1;
 
   const handleCountChange = (event) => {
@@ -12,7 +15,7 @@
 </script>
 
 <div class="add-to-cart-button">
-  <Counter min={1} max={17} value={count} on:change={handleCountChange} />
+  <Counter {min} {max} value={count} on:change={handleCountChange} />
   <Button on:click={() => addToCart({ id: $product.id, count })}>
     Add to cart
   </Button>
