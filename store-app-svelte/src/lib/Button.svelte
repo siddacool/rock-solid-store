@@ -1,9 +1,10 @@
 <script lang="ts">
+  export let disabled = false;
   let clazz = "";
   export { clazz as class };
 </script>
 
-<button on:click class={`button ${clazz || ""}`}>
+<button on:click class={`button ${clazz || ""}`} class:disabled {disabled}>
   <slot />
 </button>
 
@@ -20,11 +21,19 @@
     min-width: 100px;
 
     &:hover {
-      filter: brightness(1.2);
+      &:not(.disabled) {
+        filter: brightness(1.2);
+      }
     }
 
     &:active {
-      filter: brightness(1.2) saturate(1.2);
+      &:not(.disabled) {
+        filter: brightness(1.2) saturate(1.2);
+      }
+    }
+
+    &.disabled {
+      filter: grayscale(1) brightness(2.6);
     }
   }
 </style>

@@ -1,8 +1,9 @@
 <script lang="ts">
+  import Button from "lib:Button";
   import { createEventDispatcher } from "svelte";
-  export let value;
-  export let min;
-  export let max;
+  export let value = 1;
+  export let min = 1;
+  export let max = 99;
   let clazz = "";
   export { clazz as class };
 
@@ -24,43 +25,73 @@
 
   function onIncrement() {
     let valueCache = value;
-    valueCache = valueCache + 1;
+    valueCache += 1;
 
     onChangeEvent(valueCache);
   }
 
   function onDecrement() {
     let valueCache = value;
-    valueCache = valueCache - 1;
+    valueCache -= 1;
 
     onChangeEvent(valueCache);
   }
 </script>
 
 <div class={`counter ${clazz || ""}`}>
-  <button>-</button>
-  <input type="text" value={`${value}`} />
-  <button>+</button>
+  <Button
+    on:click={onDecrement}
+    disabled={min && value <= min}
+    class="counter-button">-</Button
+  >
+  <input type="text" value={`${value}`} readonly />
+  <Button
+    on:click={onIncrement}
+    disabled={max && value >= max}
+    class="counter-button">+</Button
+  >
 </div>
 
 <style lang="scss">
-  .button {
+  .counter {
+    display: inline-flex;
     color: var(--color-font-light);
     border: none;
     outline: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    background-color: var(--color-main);
-    cursor: pointer;
+    margin-right: 24px;
+    margin-bottom: 24px;
     font-size: 1.2rem;
-    min-width: 100px;
+    align-items: center;
 
-    &:hover {
-      filter: brightness(1.2);
+    input {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border: 2px solid var(--color-bg);
+      background-color: transparent;
+      outline: none;
+      filter: brightness(0.7) saturate(2.2);
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-right-width: 0;
+      border-left-width: 0;
+      width: 100px;
+      height: 46px;
     }
 
-    &:active {
-      filter: brightness(1.2) saturate(1.2);
+    :global(.counter-button) {
+      min-width: initial;
+      padding: 12px 0;
+      width: 45px;
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
     }
   }
 </style>
