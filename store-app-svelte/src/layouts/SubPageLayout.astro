@@ -1,0 +1,19 @@
+---
+import MainLayout from 'layouts:MainLayout';
+import BreadCrumbs from 'lib:BreadCrumbs';
+
+const {crumbs = [], title = 'Solid store'} = Astro.props;
+---
+<MainLayout title={title}>
+	<BreadCrumbs crumbs={crumbs} />
+  <h1>{title}</h1>
+  <article>
+    <slot />
+  </article>
+</MainLayout>
+
+<style lang="scss">
+  h1 {
+   margin-top: 0;
+  }
+</style>
