@@ -1,0 +1,1 @@
+import{G as t}from"./vendor.f39d2ac6.js";const n={"1":{count:1},"3":{count:2}},d=t(n),s=o=>{d.update(a=>{const c={...a};return c[o.id]||(c[o.id]={count:0}),o.force?c[o.id].count=o.count:c[o.id].count=c[o.id].count+o.count,c})};export{s as a,d as c};
