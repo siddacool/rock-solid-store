@@ -66,6 +66,7 @@
     padding: 24px;
     flex: 1;
     font-weight: 500;
-    background-color: var(--color-backdrop);
+    background-color: var(--color-bg);
+    filter: brightness(0.9) saturate(1.3);
   }
 </style>
