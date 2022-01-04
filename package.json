@@ -1,8 +1,7 @@
 {
   "name": "rock-solid-store",
   "version": "1.0.0",
-  "description": "Store created in solidjs",
-  "main": "index.js",
+  "description": "Astro + Svelte example",
   "author": "siddacool",
   "license": "ISC"
 }
