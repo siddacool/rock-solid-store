@@ -76,6 +76,7 @@
       border-left-width: 0;
       width: 100px;
       height: 46px;
+      color: var(--color-font-dark);
     }
 
     :global(.counter-button) {

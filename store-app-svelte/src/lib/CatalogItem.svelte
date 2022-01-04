@@ -10,7 +10,7 @@
       <img src={image} alt={title} />
     </div>
 
-    <div class="title">{title}</div>
+    <div class="title backdrop-filter">{title}</div>
   </a>
 </li>
 
@@ -67,6 +67,5 @@
     flex: 1;
     font-weight: 500;
     background-color: var(--color-bg);
-    filter: brightness(0.9) saturate(1.3);
   }
 </style>

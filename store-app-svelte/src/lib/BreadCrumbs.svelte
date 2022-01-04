@@ -38,7 +38,6 @@
   }
 
   a {
-    color: var(--color-main);
-    text-decoration: none;
+    color: var(--color-font-dark);
   }
 </style>

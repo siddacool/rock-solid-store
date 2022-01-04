@@ -34,7 +34,7 @@
     <img src={info.image} alt={info.title} />
   </div>
 
-  <div class="description">
+  <div class="description backdrop-filter">
     <div class="title">{info.title}</div>
     <div class="price">${info.price}</div>
     <div class="counter">
@@ -89,7 +89,6 @@
     padding: 24px;
     flex: 1;
     background-color: var(--color-bg);
-    filter: brightness(0.9) saturate(1.3);
   }
 
   .title {

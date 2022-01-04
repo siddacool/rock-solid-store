@@ -10,7 +10,7 @@
 
 <style lang="scss">
   .button {
-    color: var(--color-font-light);
+    color: var(--color-constant-font-light);
     border: none;
     outline: none;
     padding: 12px 24px;
@@ -34,6 +34,8 @@
 
     &.disabled {
       filter: grayscale(1) brightness(2.6);
+      color: #000;
+      opacity: 0.4;
     }
   }
 </style>

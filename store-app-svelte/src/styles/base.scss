@@ -16,3 +16,13 @@ body {
   color: var(--color-font-dark);
   background-color: var(--color-bg);
 }
+
+.backdrop-filter {
+  filter: brightness(0.9) saturate(1.3);
+}
+
+.dark {
+  .backdrop-filter {
+    filter: brightness(1.4) saturate(1.3);
+  }
+}
